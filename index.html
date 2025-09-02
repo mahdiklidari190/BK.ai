@@ -3,24 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>هوش مصنوعی پیشرفته چت</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>هوش مصنوعی چت پیشرفته - GitHub Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>هوش مصنوعی پیشرفته</h1>
+        <header>
+            <h1>هوش مصنوعی چت پیشرفته</h1>
+            <p>یک دستیار هوشمند با قابلیت گفتگو، حل مسائل ریاضی و جستجوی اطلاعات</p>
+            <div class="badges">
+                <span class="badge">GitHub Pages</span>
+                <span class="badge">بدون نیاز به نصب</span>
+                <span class="badge">پشتیبانی از ریاضیات</span>
+            </div>
+        </header>
+
         <div class="chat-container">
             <div id="chat-box" class="chat-box">
                 <div class="message ai-message">
-                    سلام! من یک هوش مصنوعی پیشرفته هستم. چگونه می‌توانم کمک کنم؟
+                    <div class="avatar">
+                        <i class="mdi mdi-robot"></i>
+                    </div>
+                    <div class="content">
+                        <div class="text">سلام! من یک هوش مصنوعی پیشرفته هستم که مستقیماً در مرورگر شما اجرا می‌شوم. چگونه می‌توانم کمک کنم؟</div>
+                        <div class="time">همین حالا</div>
+                    </div>
+                </div>
+                
+                <div class="message ai-message">
+                    <div class="avatar">
+                        <i class="mdi mdi-robot"></i>
+                    </div>
+                    <div class="content">
+                        <div class="text">من می‌توانم در موضوعات مختلف با شما گفتگو کنم، مسائل ریاضی را حل کنم و اطلاعات به روز را جستجو نمایم.</div>
+                        <div class="time">همین حالا</div>
+                    </div>
                 </div>
             </div>
+
             <div class="input-area">
-                <input type="text" id="user-input" placeholder="پیام خود را وارد کنید...">
-                <button onclick="sendMessage()">ارسال</button>
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="پیام خود را وارد کنید..." autocomplete="off">
+                    <button id="send-btn">
+                        <i class="mdi mdi-send"></i>
+                    </button>
+                </div>
+                <div class="quick-actions">
+                    <button class="quick-btn" data-action="ریاضی">مسئله ریاضی</button>
+                    <button class="quick-btn" data-action="جستجو">جستجو</button>
+                    <button class="quick-btn" data-action="پاک کردن">پاک کردن چت</button>
+                </div>
             </div>
         </div>
+
+        <div class="features">
+            <h2>امکانات هوش مصنوعی</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="mdi mdi-chat"></i>
+                    <h3>گفتگوی طبیعی</h3>
+                    <p>توانایی گفتگو در موضوعات مختلف با پاسخ‌های هوشمند</p>
+                </div>
+                <div class="feature">
+                    <i class="mdi mdi-calculator"></i>
+                    <h3>حل مسائل ریاضی</h3>
+                    <p>حل انواع مسائل ریاضی از ساده تا پیچیده</p>
+                </div>
+                <div class="feature">
+                    <i class="mdi mdi-magnify"></i>
+                    <h3>جستجوی اطلاعات</h3>
+                    <p>دسترسی به اطلاعات به روز از طریق جستجوی وب</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>این پروژه به صورت کامل در GitHub Pages قابل اجرا است و هیچ نیاز به نصب یا backend ندارد</p>
+            <div class="github-link">
+                <i class="fab fa-github"></i>
+                <a href="#" id="github-url">مشاهده در GitHub</a>
+            </div>
+        </footer>
     </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- کتابخانه‌های ضروری -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.2/math.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
