@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هوش مصنوعی پیشرفته چت</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>هوش مصنوعی پیشرفته</h1>
+        <div class="chat-container">
+            <div id="chat-box" class="chat-box">
+                <div class="message ai-message">
+                    سلام! من یک هوش مصنوعی پیشرفته هستم. چگونه می‌توانم کمک کنم؟
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="پیام خود را وارد کنید...">
+                <button onclick="sendMessage()">ارسال</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
